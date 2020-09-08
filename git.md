@@ -51,6 +51,16 @@ git checkout [branch_name] //切换分支
   git add [filename]
   git commit -m "commit message"
 
+//版本号控制(使用tag 来给某一个commit打标签，使之成为一个重要节点/版本)
+  git tag //查看所有版本号
+  git tag -l "v1.8.5*" //查看某一版本号
+  git tag -a v1.4 -m "my version 1.4" / -a:附注标签，git tag显示该信息 -m:message
+  git show [附注标签]
+  git tag -a v1.2 9fceb02 //给历史版本打标签
+  git tag -d v1.0.0 //删除本地标签
+  git push [origin] [版本号] //推送标签
+  git push origin :refs/tags/v1.0.0  //删除远程标签
+
 ```
 
 ### git 远程仓库
@@ -101,4 +111,16 @@ git_project => collaborators => add collabrator
   在github.com自己账号下设置里添加ssh-key
 
   git remote add [origin_ssh] [project_address] //添加一个remote 指向ssh项目地址
+```
+
+### git手册
+
+```shell
+  https://git-scm.com/book/zh/v2
+```
+
+### 在centOS7 上安装gitlab server
+
+```shell
+  about.gitlab.com
 ```
