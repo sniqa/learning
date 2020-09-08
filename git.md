@@ -89,3 +89,16 @@ git_project => collaborators => add collabrator
   git push -> pull request } -> A:{merge}
 
 ```
+
+### ssh登录
+
+```shell
+  cd ~ //移动到根目录
+  ssh-keygen -t rsa -C [account_email] //生成ssh密钥rsa加密 .ssh文件夹
+  cd .ssh //有id_rsa id_rsa_pub 两个文件
+  cat id_rsa.pub //查看rsa密钥 前缀带有ssh-rsa
+
+  在github.com自己账号下设置里添加ssh-key
+
+  git remote add [origin_ssh] [project_address] //添加一个remote 指向ssh项目地址
+```
